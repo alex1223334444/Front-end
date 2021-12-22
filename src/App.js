@@ -45,7 +45,7 @@ const divStyle = {
 */
 
 const navStyle={
-position: 'fixed',
+position: 'fixed' ,
   padding: '0',
   top: '100px',
   

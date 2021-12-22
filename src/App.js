@@ -15,35 +15,6 @@ const divStyle = {
   position: 'fixed'
 };
 
-/*const App = props => {
-  return (
-    <div style={divStyle} className="App">
-      <BrowserRouter>
-        <nav>
-          <ul className="App-header" style={{ 'alignContent': 'center' }}>
-            <Header></Header>
-            <li><Link to="/Login">Log in</Link></li>
-            <li><Link to="/Add">Add recipe</Link></li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route path="/Add">
-            <Add />
-          </Route>
-        </Switch>
-    </BrowserRouter>
-    </div>
-
-
-  );
-}
-
-*/
-
 const navStyle={
 position: 'fixed' ,
   padding: '0',

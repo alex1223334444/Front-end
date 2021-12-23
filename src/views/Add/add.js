@@ -3,15 +3,7 @@ import { Header } from '../../components/Header';
 import styled from 'styled-components';
 import { useRef } from 'react';
 import axios from 'axios';
-const Button = styled.button`
-  background-color: green;
-  color: white;
-  font-size: 30px;
-  padding: 10px 60px;
-  border-radius: 5px;
-  margin: 10px 0px;
-  cursor: pointer;
-`;
+import { Button } from '../../components/Button'
 //const Add = props => {
 function Add() {
 

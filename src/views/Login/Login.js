@@ -4,11 +4,7 @@ import { useState } from "react";
 import ReactDOM from 'react-dom';
 import Box from '@material-ui/core/Box';
 import { AppBar, Toolbar } from "@material-ui/core";
-
-
-
-
-
+import { Button } from '../../components/Button'
 
 const imgMyimageexample = require('../../background.jpg');
 const divStyle = {
@@ -18,17 +14,6 @@ const divStyle = {
   backgroundSize: 'cover',
   position: 'fixed'
 };
-
-
-const Button = styled.button`
-  background-color: green;
-  color: white;
-  font-size: 30px;
-  padding: 10px 60px;
-  border-radius: 5px;
-  margin: 10px 0px;
-  cursor: pointer;
-`;
 
 const tool = () => {
   return <Toolbar style={{ fontSize: '30px', top: '-10px' }}>Healty recipes</Toolbar>;

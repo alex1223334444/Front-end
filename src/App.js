@@ -5,7 +5,7 @@ import { Add } from './views/Add';
 import { Header } from './components/Header';
 import './App.css';
 import { Navigate } from "react-router-dom";
-
+import { SeeAll } from './views/SeeAll';
 const imgMyimageexample = require('./background.jpg');
 const divStyle = {
   width: '100%',
@@ -31,6 +31,7 @@ const App = props => {
           <ul >
             <li><Link to="/Login">Login</Link></li>
             <li><Link to="/Add">Add recipe</Link></li>
+            <li><Link to="/SeeAll">See a list of all recipes</Link></li>
           </ul>
         </nav>
         <Switch>
@@ -39,6 +40,9 @@ const App = props => {
           </Route>
           <Route path="/Add">
             <Add />
+          </Route>
+          <Route path="/SeeAll">
+            <SeeAll />
           </Route>
         </Switch>
       </BrowserRouter>

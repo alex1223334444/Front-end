@@ -1,7 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import styled from 'styled-components';
 import { useState } from "react";
-import ReactDOM from 'react-dom';
 import Box from '@material-ui/core/Box';
 import { AppBar, Toolbar } from "@material-ui/core";
 import { Button } from '../../components/Button'
@@ -33,7 +31,6 @@ function Login() {
     try {
       const { data } = await axios.get("http://localhost:3001/users/all_users");
       setData(data.toArray);
-      //console.log(data.length);
       for(let i=0;i<data.length; i++)
       {
         if(username===data[i].username && password===data[i].password)
@@ -47,17 +44,12 @@ function Login() {
 }, []);
  }
   const nameForm = useRef(null);
-  /*const handleClickEvent = () => {
-    const form = nameForm.current;
-    username=form['name'].value;
-    password= form['pass'].value;
-    //console.log(username, password);
-  }*/
+
 
   
 
   return (
-    <div className="log" /*style={divStyle}*/>
+    <div className="log" >
       <Header></Header>
       <Box style={{ display: 'flex', color: '4E4948', bgcolor: 'BEB6B4', border: '15px', borderColor: '4E4948', width: '100px', height: '100px' }}>
         <p style={{ position: 'absolute', justifyContent: 'center', alignItems: 'center', left: '300px', top: '200px', fontSize: '20px' }}>Log into your account:</p>

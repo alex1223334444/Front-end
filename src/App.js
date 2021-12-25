@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Router, Routes, Route, Link, Switch, withRouter, Redirect } from 'react-router-dom';
+import { BrowserRouter,  Route, Link, Switch } from 'react-router-dom';
 import { Login } from './views/Login';
 import { Add } from './views/Add';
 import { Header } from './components/Header';
 import './App.css';
-import { Navigate } from "react-router-dom";
 import { SeeAll } from './views/SeeAll';
 const imgMyimageexample = require('./background.jpg');
 const divStyle = {

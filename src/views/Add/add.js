@@ -1,10 +1,8 @@
 import React from 'react';
 import { Header } from '../../components/Header';
-import styled from 'styled-components';
 import { useRef } from 'react';
 import axios from 'axios';
 import { Button } from '../../components/Button'
-//const Add = props => {
 function Add() {
 
   const nameForm = useRef(null);
@@ -21,7 +19,6 @@ function Add() {
       }, (error) => {
         console.log(error);
       });
-    //alert(`${form['title'].value} ${form['ingredients'].value} ${form['time'].value} ${form['how'].value}`)
   }
   return (
     <div className="log" >

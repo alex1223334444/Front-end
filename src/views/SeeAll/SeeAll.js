@@ -1,25 +1,56 @@
 import React, { useState, useEffect } from "react";
-import { Header } from '../../components/Header';
 import axios from 'axios';
-import Box from '@mui/material/Box';
 import Card from 'react-bootstrap/Card'
-import { Scrollbar } from "react-scrollbars-custom";
+import { Modal, Button  } from "react-bootstrap";
+
+const fetch = () => {
+  
+   axios.get("http://localhost:3001/users/single_recipe")
+        .then(function (response) {
+            console.log(response.data);
+            return response.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+ 
+}
+
 
 
 
 const Message = props => {
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
   return (
+
+    <div>
     <Card border={"success"} bg='success' style={{ width: '18rem', color: '#FFFFFF', border: '1px', backgroundColor: '#008000' }}>
       <Card.Header>{props.title}</Card.Header>
       <Card.Body>
         <Card.Text>
           {props.time_to_prepare} hours needed to prepare.
+          {props.key}
         </Card.Text>
-        <button variant="primary">See more details</button>
+        <Modal show={show}>
+        <Modal.Header closeButton>
+          <Modal.Title>{props.title} </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>Close Modal</Button>
+        </Modal.Footer>
+      </Modal>
+        <button variant="primary" onClick={handleShow}>See more details</button>
+        
+
       </Card.Body>
-    </Card>
+    </Card >
+    </div>
   )
-  }
+}
 function SeeAll() {
   const [recipes, setData] = useState();
 
@@ -38,8 +69,7 @@ function SeeAll() {
 
 
   return (
-    <div style={{overflowY:'scroll', height:'100%'}}>
-      
+    <div style={{ overflowY: 'scroll', height: '100%' }}>
       {
         recipes && recipes.map((info) => (
           <li style={{
@@ -48,14 +78,14 @@ function SeeAll() {
             justifyContent: "center",
             alignItems: "center",
           }}
-            key={info.id}>
+            key={info._id}>
             <Message
               title={info.title}
               time_to_prepare={info.time_to_prepare}
             />
           </li>
-        ))}  
-        </div>
+        ))}
+    </div>
   )
 
 };

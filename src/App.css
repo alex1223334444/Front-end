@@ -30,3 +30,22 @@
   align-items: center;
   text-align: center;}
 
+  .rectangle {
+    display: inline-block;
+    position: relative;
+    top:-72px;
+    color: white;
+    width: 150px;
+    height: 1000px;
+    background: green;
+  }
+
+  .rectangle:hover{
+    color: rgb(250, 250, 250)!important;
+  }
+
+  .rectangle:link{
+    text-decoration: none;
+    color: #FFF!important;
+
+  }

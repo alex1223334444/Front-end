@@ -26,7 +26,7 @@ function Add() {
   return (
     <div className="log" >
       <Header></Header>
-      <p style={{ position: 'absolute', justifyContent: 'center', alignItems: 'center', left: '300px', top: '200px', fontSize: '20px' }}>Log into your account:</p>
+      <p style={{ position: 'absolute', justifyContent: 'center', alignItems: 'center', left: '300px', top: '200px', fontSize: '20px' }}>Add a recipe:</p>
       <form ref={nameForm} action='/users/add_recipe' method='POST'>
         <label style={{ alignContent: 'flex-start', position: 'absolute', left: '300px', top: '300px', fontSize: '20px' }}>
           Title:

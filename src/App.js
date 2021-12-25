@@ -28,10 +28,10 @@ const App = props => {
       <Header></Header>
       <BrowserRouter>
         <nav  style={navStyle} >
-          <ul >
-            <li><Link to="/Login">Login</Link></li>
-            <li><Link to="/Add">Add recipe</Link></li>
-            <li><Link to="/SeeAll">See a list of all recipes</Link></li>
+          <ul className='rectangle'>
+            <li><Link to="/Login" style={{color: 'white'}}>Login</Link></li>
+            <li><Link to="/Add" style={{color: 'white'}}>Add recipe</Link></li>
+            <li><Link to="/SeeAll" style={{color: 'white'}} >See a list of all recipes</Link></li>
           </ul>
         </nav>
         <Switch>
